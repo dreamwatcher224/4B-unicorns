@@ -1,3 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
-
+.box {
+		background-color: #17CB94;
+		height: 700px;
+		width: 700px;
+		border-radius: 10px;
+		position: relative;
+		top: 80px;
+		left: 40%
+}
