@@ -14,8 +14,12 @@
 	<body>
 		<!--Add your HTML here-->
 		<div id="body">
-			<input type="text" placeholder="Enter a letter">
-			<input type="button" value="Check">
+			<input type="text" placeholder="Enter a letter" id="letter">
+			<input type="button" value="Check" onclick="check(document.getElementById('letter').value)">
+			<h3>Wrong</h3>
+			<div id="wrong">
+				<p id="wrongLetters"></p>
+			</div>
 		</div>
 	</body>
 </html>
