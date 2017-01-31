@@ -39,4 +39,15 @@ function check(x) {
 		document.getElementById('wrong').innerHTML += "<br><p>" + x + "</p>";
 	}
 }
-
+var counter = 0;
+var storage = "";
+var index = [null, null, null, null, null, null, null, null, null];
+function v(x) {
+	for(var i = 0; i < randselect.length; i++) {
+		if(randselect.charAt(i) == x) {
+			bool = true;
+			index[counter] = x;
+			counter++;
+		}
+	}
+}
