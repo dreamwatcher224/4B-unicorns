@@ -28,7 +28,7 @@ for(var i = 0; i < randselect.length; i++) {
 	document.write("_ ");
 }
 // Function to check if letter is in word
-var bool = false;
+/*var bool = false;
 function check(x) {
 	for(var i = 0; i < randselect.length; i++) {
 		if(randselect.charAt(i) == x) {
@@ -38,16 +38,25 @@ function check(x) {
 	if(bool == false) {
 		document.getElementById('wrong').innerHTML += "<br><p>" + x + "</p>";
 	}
-}
+}*/
 var counter = 0;
 var storage = "";
-var index = [null, null, null, null, null, null, null, null, null];
+var index = [];
+var right = true;
 function v(x) {
 	for(var i = 0; i < randselect.length; i++) {
 		if(randselect.charAt(i) == x) {
-			bool = true;
+			right = true;
 			index[counter] = x;
 			counter++;
 		}
 	}
+	if(right == false) {
+		
+	} else {
+		for(var j = 0; j < randselect.length; j++) {
+			
+		}
+	}
+	index = [];
 }
