@@ -1,16 +1,28 @@
 // JavaScript Document
 
 // Categories
-var categories = [food, sports, animals, countries];
 var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork", "ice cream"];
-var sports = ["baseball", "football", "soccer", "table tennis", "tennis", "badminton", "basketball", "water polo", "hockey", "swimming"];
+/*var sports = ["baseball", "football", "soccer", "table tennis", "tennis", "badminton", "basketball", "water polo", "hockey", "swimming"];
 var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur"];
 var countries = ["Argentina", "America", "China", "Japan", "Russia", "Canada", "Brazil", "Italy", "Australia", "Mexico", "Spain", "Korea", "Egypt", "Greece", "France", "Greenland", "Iceland", "England", "Portugal", "Vietnam", "India"];
+var category = "";
 
+
+// Category Functions
+function f(val) {
+	category = food[Math.floor(Math.random() * food.length)];
+}
+function s(val) {
+	category = sports[Math.floor(Math.random() * sports.length)];
+}
+function a(val) {
+	category = animals[Math.floor(Math.random() * animals.length)];
+}
+function c(val) {
+	category = countries[Math.floor(Math.random() * countries.length)];
+} */
 // Random Word Chooser
-// >>>>> Julia
-var words = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato"];
-var randselect = words[Math.floor(Math.random() * words.length)];
+var randselect = food[Math.floor(Math.random() * food.length)];
 // Prints blank underscores
 for(var i = 0; i < randselect.length; i++) {
 	document.write("_ ");
@@ -24,20 +36,7 @@ function check(x) {
 		}
 	}
 	if(bool == false) {
-		
+		document.getElementById('wrong').innerHTML += "<br><p>" + x + "</p>";
 	}
-	//document.getElementById('wrong').innerHTML += "<br>document.write(x)";
-}
-//=======
-var category = 
-var randselect = category[Math.floor(Math.random() * category.length)];
-
-// Category Functions
-function c(val) {
-	category = 
 }
 
-
-
-
-// >>>>>>> Version1.0
