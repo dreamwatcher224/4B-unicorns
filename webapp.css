@@ -7,19 +7,37 @@ background-image: url(images/paper.jpg);
 
 
 .box {
-	background-color: #B2D0F5;
+	/* background-color: #B2D0F5; */
 	height: 500px;
-	width: 500px;
+	width: 1000px;
 	border-radius: 10px;
 	position: relative;
 	top: 80px;
-	left: 30%
+	left: 15%;
 }
 
 .keys {
 	position: relative;
 	top: 15px;
+
 }
+.sidebox {
+	background-color: rgba(76, 198, 255, 0.4);
+	height: 400px;
+	width: 150px;
+	float: left;
+	border-radius: 16px;
+}
+
+.keybox {
+	background-color: rgba(76, 198, 255, 0.4); 
+	float: right;
+	width: 400px;
+	height: 300px;
+	float:
+	
+}
+	
 .button {
 	width: 30px;
 	height: 25px;
