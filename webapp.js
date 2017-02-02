@@ -57,6 +57,7 @@ function v(x) {
 	counter = 0;
 }
 // Random Word Chooser
+
 var randselect = food[Math.floor(Math.random() * food.length)];
 document.write("randselect: " + randselect);
 // Prints blank underscores
@@ -65,3 +66,4 @@ for(var i = 0; i < randselect.length; i++) {
 }
 document.write(blank);
 document.write("|||" + blank);
+
