@@ -23,11 +23,13 @@ function c(val) {
 } */
 // Random Word Chooser
 var randselect = food[Math.floor(Math.random() * food.length)];
+document.write("randselect: " + randselect);
 // Prints blank underscores
 var blank = "";
 for(var i = 0; i < randselect.length; i++) {
 	blank += "_ ";
 }
+document.write(blank);
 // Function to check if letter is in word
 /*var bool = false;
 function check(x) {
@@ -59,9 +61,10 @@ function v(x) {
 			if(index[i] == 0) {
 				
 			} else {
-				r//andselect = blank.substring(0, (index[i]-1)) + index[i] +
+				blank = blank.substring(0, (index[i]-1)) + index[i] + blank.substring(index[i+1])
 			}
 		}
 	}
 	index = [];
 }
+document.write("|||" + blank);
