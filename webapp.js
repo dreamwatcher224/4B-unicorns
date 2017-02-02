@@ -21,39 +21,26 @@ function a(val) {
 function c(val) {
 	category = countries[Math.floor(Math.random() * countries.length)];
 } */
-// Random Word Chooser
-var randselect = food[Math.floor(Math.random() * food.length)];
-document.write("randselect: " + randselect);
-// Prints blank underscores
-var blank = "";
-for(var i = 0; i < randselect.length; i++) {
-	blank += "_ ";
-}
-document.write(blank);
-// Function to check if letter is in word
-/*var bool = false;
-function check(x) {
-	for(var i = 0; i < randselect.length; i++) {
-		if(randselect.charAt(i) == x) {
-			bool = true;
-		}
-	}
-	if(bool == false) {
-		document.getElementById('wrong').innerHTML += "<br><p>" + x + "</p>";
-	}
-}*/
+
+
+
+
+
 var counter = 0;
 var storage = 0;
 var index = [];
-var right = true;
+var right = false;
+var blank = "";
 function v(x) {
+	var test = x.toLowerCase();
 	for(var i = 0; i < randselect.length; i++) {
-		if(randselect.charAt(i) == x) {
+		if(randselect.charAt(i) == test) {
 			right = true;
-			index[counter] = x;
+			index[counter] = i;
 			counter++;
 		}
 	}
+
 	if(right == false) {
 		
 	} else {
@@ -61,10 +48,20 @@ function v(x) {
 			if(index[i] == 0) {
 				
 			} else {
-				blank = blank.substring(0, (index[i]-1)) + index[i] + blank.substring(index[i+1])
+				document.write("blank: " + blank);
+				blank = blank.substr(0, (index[i])) + index[i] + blank.substr(index[i+1]);
 			}
 		}
 	}
 	index = [];
+	counter = 0;
 }
+// Random Word Chooser
+var randselect = food[Math.floor(Math.random() * food.length)];
+document.write("randselect: " + randselect);
+// Prints blank underscores
+for(var i = 0; i < randselect.length; i++) {
+	blank += "_ ";
+}
+document.write(blank);
 document.write("|||" + blank);
