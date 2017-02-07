@@ -40,7 +40,8 @@ function v(x) {
 			counter++;
 		}
 	}
-
+	document.getElementById("words").innerHTML = blank;
+	//document.getElementById("words").innerHTML = "testing";
 	if(right == false) {
 		
 	} else {
@@ -48,15 +49,19 @@ function v(x) {
 			if(index[i] == 0) {
 				
 			} else {
-				document.write("blank: " + blank);
 				blank = blank.substr(0, (index[i])) + index[i] + blank.substr(index[i+1]);
-				document.write("blank: " + blank);
 			}
 		}
 	}
 	index = [];
 	counter = 0;
 }
+
+function update(a) {
+	document.getElementById("words").innerHTML = a;
+}
+
+
 // Random Word Chooser
 
 var randselect = food[Math.floor(Math.random() * food.length)];
@@ -67,6 +72,8 @@ for(var i = 0; i < randselect.length; i++) {
 	blank += "_ ";
 }
 document.write(blank);
+document.getElementById("words").innerHTML = blank;
+
 
 /*var counter = 0; 
 var index = [];
