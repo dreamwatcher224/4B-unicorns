@@ -26,7 +26,7 @@ function c(val) {
 
 
 
-/*var counter = 0;
+var counter = 0;
 var storage = 0;
 var index = [];
 var right = false;
@@ -38,7 +38,6 @@ function v(x) {
 			right = true;
 			index[counter] = i;
 			counter++;
-			//
 		}
 	}
 
@@ -51,32 +50,37 @@ function v(x) {
 			} else {
 				document.write("blank: " + blank);
 				blank = blank.substr(0, (index[i])) + index[i] + blank.substr(index[i+1]);
+				document.write("blank: " + blank);
 			}
 		}
 	}
 	index = [];
 	counter = 0;
-}*/
+}
 // Random Word Chooser
 
 var randselect = food[Math.floor(Math.random() * food.length)];
-document.write("randselect: " + randselect);
+var blank = "";
+document.writeln("randselect: " + randselect);
 // Prints blank underscores
 for(var i = 0; i < randselect.length; i++) {
 	blank += "_ ";
 }
 document.write(blank);
-document.write("|||" + blank);
 
-var counter = 0; 
+/*var counter = 0; 
 var index = [];
+var correct = false;
 
 function v(x) {
 	var text = x.toLowerCase();
 	for(var i = 0; i < randselect; i++) {
-		if(randselect.charAt(i)+"" == text) {
+		if(randselect.charAt(i) == text) {
 			index[counter] = i;
 			counter++;
+			correct = true;
 		}
 	}
-}
+	document.write(index);
+}*/
+
