@@ -38,6 +38,7 @@ function v(x) {
 			right = true;
 			index[counter] = i;
 			counter++;
+			//
 		}
 	}
 
