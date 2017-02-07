@@ -42,19 +42,19 @@ background-image: url(images/paper.jpg);
 }
 
 #food {
-	background-image: url(macandcheese.png);
+	background-image: url(images/macandcheese.png);
 }
 
 #sports {
-	background-image: url(images/sports.jpg)
+	background-image: url(images/esports.png);
 }
 
 #animals {
-	background-image: url(animal.jpg);
+	background-image: url(images/eanimal.png);
 }
 
 #countries {
-	background-image: url(world.gif.png);
+	background-image: url(images/eworld.png);
 }
 
 #side {
@@ -74,7 +74,6 @@ background-image: url(images/paper.jpg);
 	float: right;
 	width: 400px;
 	height: 300px;
-	float:
 }
 
 	
