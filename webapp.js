@@ -26,7 +26,7 @@ function c(val) {
 
 
 
-var counter = 0;
+/*var counter = 0;
 var storage = 0;
 var index = [];
 var right = false;
@@ -56,7 +56,7 @@ function v(x) {
 	}
 	index = [];
 	counter = 0;
-}
+}*/
 // Random Word Chooser
 
 var randselect = food[Math.floor(Math.random() * food.length)];
@@ -68,3 +68,15 @@ for(var i = 0; i < randselect.length; i++) {
 document.write(blank);
 document.write("|||" + blank);
 
+var counter = 0; 
+var index = [];
+
+function v(x) {
+	var text = x.toLowerCase();
+	for(var i = 0; i < randselect; i++) {
+		if(randselect.charAt(i)+"" == text) {
+			index[counter] = i;
+			counter++;
+		}
+	}
+}
