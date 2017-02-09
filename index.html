@@ -17,6 +17,8 @@
 		<!--Add your HTML here-->
 <div class="box">
 	<p id="words">test</p>
+	<br>
+	<input type="button" value="Generate Word" id="gen" onclick="gen()">
 	<div class="sidebox">
 		<div id= "side"> <br>
 <input type="button" value="Sports" class="button category" id="sports" onClick="s(val)"><br>
@@ -25,7 +27,7 @@
 <input type="button" value="Food" class="button category" id="food" onClick="f(val)">
 		</div>
 	</div>
-	<div class="keybox">
+	<div id="keybox">
 	<div class="keys">
 		<p>
 			<input type= "button" class= "button letter" value= "A" onClick="v('A')">
@@ -63,6 +65,11 @@
 		</p>
 			</div>
 	</div>
+	
+	<div id="hangman">
+		<p> HANGMAN </p>
+	</div>
+	
 </div>
       </body>
     </html>
