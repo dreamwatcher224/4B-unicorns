@@ -72,8 +72,11 @@ for(var i = 0; i < randselect.length; i++) {
 	blank += "_ ";
 }
 document.write(blank);
-document.getElementById("words").innerHTML = blank;
+//document.getElementById("words").innerHTML = blank;
 
+function gen() {
+	document.getElementById("words").innerHTML = blank;
+}
 
 /*var counter = 0; 
 var index = [];
