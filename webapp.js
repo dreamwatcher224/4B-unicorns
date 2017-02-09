@@ -46,11 +46,12 @@ function v(x) {
 		
 	} else {
 		for(var j = 0; j < index.length; j++) {
-			if(index[i] == 0) {
-				blank = x + blank.prototype.substr(1, blank.length);
+			if(index[j] == 0) {
+				//document.write(x+blank.substr(1,blank.length));
+				blank = x + blank.substr(1, blank.length);
 			} else {
-				document.write("test");
-				blank = blank.prototype.substr(0, (index[i])) + x + blank.prototype.substr(index[i+1]);
+				//document.write(index[j]);
+				blank = blank.substr(0, (index[j])) + x + blank.substr(index[j+1]);
 				
 				// document.getElementById("words").innerHTML = blank + ".";
 			}
@@ -64,6 +65,9 @@ function update(a) {
 	document.getElementById("words").innerHTML = a;
 }
 
+function gen() {
+	document.getElementById("words").innerHTML = blank;
+}
 
 // Random Word Chooser
 
@@ -77,9 +81,6 @@ for(var i = 0; i < randselect.length; i++) {
 document.write(blank);
 //document.getElementById("words").innerHTML = blank;
 
-function gen() {
-	document.getElementById("words").innerHTML = blank;
-}
 
 /*var counter = 0; 
 var index = [];
