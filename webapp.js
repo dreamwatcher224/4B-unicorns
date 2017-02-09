@@ -47,9 +47,12 @@ function v(x) {
 	} else {
 		for(var j = 0; j < index.length; j++) {
 			if(index[i] == 0) {
-				
+				blank = x + blank.prototype.substr(1, blank.length);
 			} else {
-				blank = blank.substr(0, (index[i])) + index[i] + blank.substr(index[i+1]);
+				document.write("test");
+				blank = blank.prototype.substr(0, (index[i])) + x + blank.prototype.substr(index[i+1]);
+				
+				// document.getElementById("words").innerHTML = blank + ".";
 			}
 		}
 	}
