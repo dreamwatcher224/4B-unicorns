@@ -40,7 +40,8 @@ function v(x) {
 			index[counter] = i;
 			counter++;
 		}
-	$("#" + x).css({"top": "200px"});
+	document.getElementById(test).style.display = "none";
+	document.getElementById(test + "_used").style.display = "inline";
 	}
 	document.getElementById("words").innerHTML = blank;
 	//document.getElementById("words").innerHTML = "testing";

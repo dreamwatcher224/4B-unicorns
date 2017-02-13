@@ -28,112 +28,11 @@ h2 {
 	top: 0px;
 	margin: 30px 20px 0px 0px;
 }
-#a {
+#a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q, #r, #s, #t, #u, #v, #w, #x, #y, #z {
 	top: 0px;
 }
-
-#b {
-	top: 0px;
-}
-
-#c {
-	top: 0px;
-}
-
-#d {
-	top: 0px;
-}
-
-#e {
-	top: 0px;
-}
-
-#f {
-	top: 0px;
-}
-
-#g {
-	top: 0px;
-}
-
-#h {
-	top: 0px;
-}
-
-#i {
-	top: 0px;
-}
-
-#j {
-	top: 0px;
-}
-
-#k {
-	top: 0px;
-}
-
-#l {
-	top: 0px;
-}
-
-#m {
-	top: 0px;
-}
-
-#a {
-	top: 0px;
-}
-
-#n {
-	top: 0px;
-}
-
-#o {
-	top: 0px;
-}
-
-#p {
-	top: 0px;
-}
-
-#q {
-	top: 0px;
-}
-
-#r {
-	top: 0px;
-}
-
-#s {
-	top: 0px;
-}
-
-#t {
-	top: 0px;
-}
-
-#u {
-	top: 0px;
-}
-
-#v {
-	top: 0px;
-}
-
-#w {
-	top: 0px;
-}
-
-#x {
-	top: 0px;
-}
-
-#y {
-	top: 0px;
-}
-
-#z {
-	top: 0px;
+#a_used, #b_used, #c_used, #d_used, #e_used, #f_used, #g_used, #h_used, #i_used, #j_used, #k_used, #l_used, #m_used, #n_used, #o_used, #p_used, #q_used, #r_used, #s_used, #t_used, #u_used, #v_used, #w_used, #x_used, #y_used, #z_used {
+	display: none;
 }
 #keybox {
 	background-color: rgba(76, 198, 255, 0.4); 
