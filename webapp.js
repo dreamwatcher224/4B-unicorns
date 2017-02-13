@@ -47,15 +47,12 @@ function v(x) {
 	} else {
 		for(var j = 0; j < index.length; j++) {
 			if(index[j] == 0) {
-				//document.write(x+blank.substr(1,blank.length));
-				blank = x + blank.substr(1, blank.length);
+				blank = x + blank.slice(1, blank.length);
 			} else {
-				//document.write(index[j]);
-				blank = blank.substr(0, (index[j])) + x + blank.substr(index[j+1]);
-				
-				// document.getElementById("words").innerHTML = blank + ".";
+				blank = blank.slice(0, (index[j])) + x + blank.slice(index[j+1], blank.length);
 			}
 		}
+		document.getElementById("words").innerHTML = blank;
 	}
 	index = [];
 	counter = 0;
@@ -98,3 +95,5 @@ function v(x) {
 	document.write(index);
 }*/
 
+//JQuery
+$(".keys").css({"position": "relative"});
