@@ -31,6 +31,7 @@ var storage = 0;
 var index = [];
 var right = false;
 var blank = "";
+
 function v(x) {
 	var test = x.toLowerCase();
 	for(var i = 0; i < randselect.length; i++) {
@@ -39,6 +40,7 @@ function v(x) {
 			index[counter] = i;
 			counter++;
 		}
+	$("#" + x).css({"top": "200px"});
 	}
 	document.getElementById("words").innerHTML = blank;
 	//document.getElementById("words").innerHTML = "testing";
@@ -63,18 +65,25 @@ function update(a) {
 }
 
 function gen() {
+	blank = "";
+	randselect = food[Math.floor(Math.random() * food.length)];
+	// Prints blank underscores
+	for(var i = 0; i < randselect.length; i++) {
+		blank += "_ ";
+	}
+	update_display();
+}
+
+function update_display() {
 	document.getElementById("words").innerHTML = blank;
 }
 
 // Random Word Chooser
 
-var randselect = food[Math.floor(Math.random() * food.length)];
+var randselect = "";
 var blank = "";
 document.writeln("randselect: " + randselect);
-// Prints blank underscores
-for(var i = 0; i < randselect.length; i++) {
-	blank += "_ ";
-}
+
 document.write(blank);
 //document.getElementById("words").innerHTML = blank;
 
@@ -96,4 +105,3 @@ function v(x) {
 }*/
 
 //JQuery
-$(".keys").css({"position": "relative"});
