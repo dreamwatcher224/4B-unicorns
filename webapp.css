@@ -11,7 +11,7 @@ background-image: url(images/paper.jpg);
 	width: 1000px;
 	border-radius: 10px;
 	position: relative;
-	top: 80px;
+	top: 30px;
 	left: 15%;
 	padding: 1px 25px;
 	background-color: rgba(255,133,135,1.00);
@@ -29,7 +29,7 @@ background-image: url(images/paper.jpg);
 	padding: 10px 10px 100px 20px;
 	/* top right bottom left*/
 	border-radius: 10px;
-	margin: 100px 50px 10px 10px;
+	margin: 10px 50px 5px 25px;
 	
 }
 .sidebox {
@@ -97,7 +97,7 @@ background-image: url(images/paper.jpg);
 #hangman {
 	background-color: rgba(76, 198, 255, 0.4);
 	width: 700px;
-	height: 250px;
+	height: 400px;
 	float: left;
 	margin: 5px 10px 50px 25px;
 	border-radius: 10px;
