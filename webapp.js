@@ -49,12 +49,13 @@ function v(x) {
 	} else {
 		for(var j = 0; j < index.length; j++) {
 			if(index[j] == 0) {
-				blank = x + blank.slice(1, blank.length);
+				blank = x + blank.substring(1, blank.length);
 			} else {
-				blank = blank.slice(0, (index[j])) + x + blank.slice(index[j+1], blank.length);
+				blank = blank.substring(0, 2*index[j]) + x + blank.substring(2*index[j]-1, blank.length);
+				document.getElementById("test").innerHTML = blank.substring(0, index[j+1]) + "..." + index[j];
 			}
 		}
-		document.getElementById("words").innerHTML = blank;
+		update_display();
 	}
 	index = [];
 	counter = 0;
@@ -71,6 +72,7 @@ function gen() {
 	for(var i = 0; i < randselect.length; i++) {
 		blank += "_ ";
 	}
+	document.getElementById("test").innerHTML = randselect;
 	update_display();
 }
 
