@@ -13,14 +13,17 @@ h2 {
 	
 }
 
+h3 {
+	
+}
+
 .box {
 	height: 700px;
-	width: 1000px;
-	border-radius: 10px;
+	width: 1150px;
 	position: relative;
 	top: 30px;
 	left: 15%;
-	padding: 1px 25px;
+	padding: 1px 10px;
 }
 
 .keys {
@@ -28,19 +31,17 @@ h2 {
 	top: 0px;
 	margin: 30px 20px 0px 0px;
 }
-#a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q, #r, #s, #t, #u, #v, #w, #x, #y, #z {
-	top: 0px;
-}
-#a_used, #b_used, #c_used, #d_used, #e_used, #f_used, #g_used, #h_used, #i_used, #j_used, #k_used, #l_used, #m_used, #n_used, #o_used, #p_used, #q_used, #r_used, #s_used, #t_used, #u_used, #v_used, #w_used, #x_used, #y_used, #z_used {
+.used.button.letter {
 	display: none;
+	background-color: white;
 }
 #keybox {
 	background-color: rgba(76, 198, 255, 0.4); 
 	float: left;
 	width: 700px;
 	height: 190px;
-	border-radius: 10px;
-	margin: 10px 50px 5px 25px;	
+	border-radius: 16px;
+	margin: 10px 0px px 10px;	
 }
 .sidebox {
 	background-color: rgba(76, 198, 255, 0.4);
@@ -48,7 +49,7 @@ h2 {
 	width: 170px;
 	float: left;
 	border-radius: 16px;
-	margin: 25px;
+	margin: 25px 15px 25px 25px;
 }
 
 .button.category {
@@ -81,7 +82,7 @@ h2 {
 #side {
 	margin-top: none;
 	border: none;
-	border-radius: 10px;
+	border-radius: 16px;
 	margin-left: 17px;
 	cursor: pointer;
 	border-top: 2px solid transparent;
@@ -111,8 +112,17 @@ h2 {
 	width: 700px;
 	height: 400px;
 	float: left;
-	margin: 25px 10px 0px 25px;
-	border-radius: 10px;
+	margin: 25px 0px 0px 10px;
+	border-radius: 16px;
+}
+
+#guessed {
+	background-color: rgba(76, 198, 255, 0.4);
+	height: 600px;
+	width: 170px;
+	border-radius: 16px;
+	float: left;
+	margin: 25px;
 }
 
 
@@ -171,4 +181,5 @@ h2 {
 	}
 
 .food {
+}
 }
