@@ -40,8 +40,14 @@ function v(x) {
 			index[counter] = i;
 			counter++;
 		}
-	document.getElementById(test).style.display = "none";
-	document.getElementById(test + "_used").style.display = "inline";
+		/*var array = document.getElementsByClassName("used button letter");
+		for(var i = 0; i < array.length; i++) {
+			array[i].style.display = "none";
+		}
+		var array2 = document.getElementsByClassName("button letter");
+		for(var i = 0; i < array2.length; i++) {
+			array2[i].style.display = "inline";
+		}*/
 	}
 	document.getElementById("words").innerHTML = blank;
 	//document.getElementById("words").innerHTML = "testing";
@@ -73,8 +79,9 @@ function gen() {
 		blank += "_ ";
 	}
 	document.getElementById("test").innerHTML = randselect;
+	document.getElementById(test + "_used").style.display = "none";
+	document.getElementById(test).style.display = "inline";
 	update_display();
-	document.getElementById("test").innerHTML = randselect;
 }
 
 function update_display() {
