@@ -52,8 +52,7 @@ function v(x) {
 			if(index[j] == 0) {
 				blank = x + blank.substring(1, blank.length);
 			} else {// _ _ _ _ _ 
-				blank = blank.substring(0, 2*index[j]) + x + blank.substring(2*index[j], blank.length+1);
-				document.getElementById("test").innerHTML = randselect + ": " + blank.substring(0, index[j+1]) + "..." + index[j];
+				blank = blank.substring(0, 2*index[j]) + x + blank.substring(2*index[j]-1, blank.length-2);
 			}
 		}
 		update_display();
@@ -75,6 +74,7 @@ function gen() {
 	}
 	document.getElementById("test").innerHTML = randselect;
 	update_display();
+	document.getElementById("test").innerHTML = randselect;
 }
 
 function update_display() {
