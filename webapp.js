@@ -51,9 +51,9 @@ function v(x) {
 		for(var j = 0; j < index.length; j++) {
 			if(index[j] == 0) {
 				blank = x + blank.substring(1, blank.length);
-			} else {
-				blank = blank.substring(0, 2*index[j]) + x + blank.substring(2*index[j]-1, blank.length);
-				document.getElementById("test").innerHTML = blank.substring(0, index[j+1]) + "..." + index[j];
+			} else {// _ _ _ _ _ 
+				blank = blank.substring(0, 2*index[j]) + x + blank.substring(2*index[j], blank.length+1);
+				document.getElementById("test").innerHTML = randselect + ": " + blank.substring(0, index[j+1]) + "..." + index[j];
 			}
 		}
 		update_display();
