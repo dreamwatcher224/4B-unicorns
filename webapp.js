@@ -33,6 +33,7 @@ var storage = 0;
 var index = [];
 var right = false;
 var blank = "";
+
 function v(x) {
 	var test = x.toLowerCase();
 	for(var i = 0; i < randselect.length; i++) {
@@ -41,31 +42,79 @@ function v(x) {
 			index[counter] = i;
 			counter++;
 		}
+		/*var array = document.getElementsByClassName("used button letter");
+		for(var i = 0; i < array.length; i++) {
+			array[i].style.display = "none";
+		}
+		var array2 = document.getElementsByClassName("button letter");
+		for(var i = 0; i < array2.length; i++) {
+			array2[i].style.display = "inline";
+		}*/
 	}
-
+	document.getElementById("words").innerHTML = blank;
+	//document.getElementById("words").innerHTML = "testing";
 	if(right == false) {
-		
+		$("#"+x.toLowerCase()).appendTo("#guessed");
 	} else {
 		for(var j = 0; j < index.length; j++) {
-			if(index[i] == 0) {
-				
-			} else {
-				document.write("blank: " + blank);
-				blank = blank.substr(0, (index[i])) + index[i] + blank.substr(index[i+1]);
+			if(index[j] == 0) {
+				blank = x + blank.substring(1, blank.length);
+			} else {// _ _ _ _ _ 
+				blank = blank.substring(0, 2*index[j]) + x + blank.substring(2*index[j]+1, blank.length);
 			}
 		}
+		update_display();
 	}
 	index = [];
 	counter = 0;
+	right = false;
 }
+
+function update(a) {
+	document.getElementById("words").innerHTML = a;
+}
+
+function gen() {
+	blank = "";
+	randselect = food[Math.floor(Math.random() * food.length)];
+	// Prints blank underscores
+	for(var i = 0; i < randselect.length; i++) {
+		blank += "_ ";
+	}
+	update_display();
+	//document.getElementById("test").innerHTML = randselect;
+	document.getElementById(test + "_used").style.display = "none";
+	document.getElementById(test).style.display = "inline";
+	
+}
+
+function update_display() {
+	document.getElementById("words").innerHTML = blank;
+}
+
 // Random Word Chooser
 
-var randselect = food[Math.floor(Math.random() * food.length)];
-document.write("randselect: " + randselect);
-// Prints blank underscores
-for(var i = 0; i < randselect.length; i++) {
-	blank += "_ ";
-}
-document.write(blank);
-document.write("|||" + blank);
+var randselect = "";
+var blank = "";
 
+document.write(blank);
+//document.getElementById("words").innerHTML = blank;
+
+
+/*var counter = 0; 
+var index = [];
+var correct = false;
+
+function v(x) {
+	var text = x.toLowerCase();
+	for(var i = 0; i < randselect; i++) {
+		if(randselect.charAt(i) == text) {
+			index[counter] = i;
+			counter++;
+			correct = true;
+		}
+	}
+	document.write(index);
+}*/
+
+//JQuery
