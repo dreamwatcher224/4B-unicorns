@@ -2,11 +2,11 @@
 
 // Categories
 
-var categories = [food, sp	orts, animals, countries];
-var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork", "ice cream"];
-var sports = ["baseball", "football", "soccer", "table tennis", "tennis", "badminton", "basketball", "water polo", "hockey", "swimming"];
-var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur"];
-var countries = ["Argentina", "America", "China", "Japan", "Russia", "Canada", "Brazil", "Italy", "Australia", "Mexico", "Spain", "Korea", "Egypt", "Greece", "France", "Greenland", "Iceland", "England", "Portugal", "Vietnam", "India"];
+var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork", "tamale", "hamburger", "fries", "salad", "sushi", "pizza", "beets", "blackberries", "avocado", "figs", "cherries", "rice", "waffle", "honey"];
+/*var sports = ["baseball", "football", "soccer", "tennis", "badminton", "basketball", "hockey", "swimming", "archery", "softball", "volleyball", "kayaking", "climbing", "boxing", "diving", "cycling", "fencing", "surfing", "wrestling", "canoeing", "skiing"];
+var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur", "fox", "wolf", "bobcat", "python", kangaroo", "sheep", "gorilla", "chameleon, "deer", mole"];
+var countries = ["Argentina", "America", "China", "Japan", "Russia", "Canada", "Brazil", "Italy", "Australia", "Mexico", "Spain", "Korea", "Egypt", "Greece", "France", "Greenland", "Iceland", "England", "Portugal", "Vietnam", "India", "Netherlands"];
+var category = "";
 
 
 
@@ -57,15 +57,50 @@ function v(x) {
 	}
 	index = [];
 	counter = 0;
+
+	right = false;
+}
+
+function update(a) {
+	document.getElementById("words").innerHTML = a;
+}
+function gen() {
+	blank = "";
+	randselect = food[Math.floor(Math.random() * food.length)];
+	// Prints blank underscores
+	for(var i = 0; i < randselect.length; i++) {
+		blank += "_ ";
+	}
+	update_display();
+	//document.getElementById("test").innerHTML = randselect;
+	document.getElementById(test + "_used").style.display = "none";
+	document.getElementById(test).style.display = "inline";
+	
+
 }
 // Random Word Chooser
 
-var randselect = food[Math.floor(Math.random() * food.length)];
-document.write("randselect: " + randselect);
-// Prints blank underscores
-for(var i = 0; i < randselect.length; i++) {
-	blank += "_ ";
-}
-document.write(blank);
-document.write("|||" + blank);
+var randselect = "";
+var blank = "";
+
+//document.getElementById("words").innerHTML = blank;
+
+
+/*var counter = 0; 
+var index = [];
+var correct = false;
+
+function v(x) {
+	var text = x.toLowerCase();
+	for(var i = 0; i < randselect; i++) {
+		if(randselect.charAt(i) == text) {
+			index[counter] = i;
+			counter++;
+			correct = true;
+		}
+	}
+	document.write(index);
+}*/
+
+//JQuery
 
