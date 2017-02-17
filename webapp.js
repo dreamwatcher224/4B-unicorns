@@ -52,7 +52,7 @@ function v(x) {
 	document.getElementById("words").innerHTML = blank;
 	//document.getElementById("words").innerHTML = "testing";
 	if(right == false) {
-		
+		$("#"+x.toLowerCase()).appendTo("#guessed");
 	} else {
 		for(var j = 0; j < index.length; j++) {
 			if(index[j] == 0) {
@@ -65,6 +65,7 @@ function v(x) {
 	}
 	index = [];
 	counter = 0;
+	right = false;
 }
 
 function update(a) {
@@ -79,7 +80,7 @@ function gen() {
 		blank += "_ ";
 	}
 	update_display();
-	document.getElementById("test").innerHTML = randselect;
+	//document.getElementById("test").innerHTML = randselect;
 	document.getElementById(test + "_used").style.display = "none";
 	document.getElementById(test).style.display = "inline";
 	
@@ -93,7 +94,6 @@ function update_display() {
 
 var randselect = "";
 var blank = "";
-document.writeln("randselect: " + randselect);
 
 document.write(blank);
 //document.getElementById("words").innerHTML = blank;
