@@ -33,7 +33,6 @@ var storage = 0;
 var index = [];
 var right = false;
 var blank = "";
-
 function v(x) {
 	var test = x.toLowerCase();
 	for(var i = 0; i < randselect.length; i++) {
@@ -42,31 +41,23 @@ function v(x) {
 			index[counter] = i;
 			counter++;
 		}
-		/*var array = document.getElementsByClassName("used button letter");
-		for(var i = 0; i < array.length; i++) {
-			array[i].style.display = "none";
-		}
-		var array2 = document.getElementsByClassName("button letter");
-		for(var i = 0; i < array2.length; i++) {
-			array2[i].style.display = "inline";
-		}*/
 	}
-	document.getElementById("words").innerHTML = blank;
-	//document.getElementById("words").innerHTML = "testing";
+
 	if(right == false) {
-		$("#"+x.toLowerCase()).appendTo("#guessed");
+		
 	} else {
 		for(var j = 0; j < index.length; j++) {
-			if(index[j] == 0) {
-				blank = x + blank.substring(1, blank.length);
-			} else {// _ _ _ _ _ 
-				blank = blank.substring(0, 2*index[j]) + x + blank.substring(2*index[j]+1, blank.length);
+			if(index[i] == 0) {
+				
+			} else {
+				document.write("blank: " + blank);
+				blank = blank.substr(0, (index[i])) + index[i] + blank.substr(index[i+1]);
 			}
 		}
-		update_display();
 	}
 	index = [];
 	counter = 0;
+
 	right = false;
 }
 
@@ -85,12 +76,8 @@ function gen() {
 	document.getElementById(test + "_used").style.display = "none";
 	document.getElementById(test).style.display = "inline";
 	
-}
 
-function update_display() {
-	document.getElementById("words").innerHTML = blank;
 }
-
 // Random Word Chooser
 
 var randselect = "";
@@ -116,3 +103,4 @@ function v(x) {
 }*/
 
 //JQuery
+
