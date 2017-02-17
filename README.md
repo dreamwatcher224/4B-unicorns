@@ -1,6 +1,6 @@
 
-# Put your app name here!
-Hangman
+# Hangman
+
 ## Description
 The objective of Hangman is to guess the word that has been selected. If you guess a letter right, the letter will appear on the screen. If not, you will see the letter in a box that displays the wrong letters you previously guessed. When you guess the wrong letter, a part of the stickfigure will apear. If you guess the letters wrong too many times, the game is over and you lose. This version of Hangman has many different categories, difficulties and a multiplayer game feature.
 <!--
