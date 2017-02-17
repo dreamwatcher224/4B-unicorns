@@ -58,7 +58,7 @@ function v(x) {
 			if(index[j] == 0) {
 				blank = x + blank.substring(1, blank.length);
 			} else {// _ _ _ _ _ 
-				blank = blank.substring(0, 2*index[j]) + x + blank.substring(2*index[j]-1, blank.length-2);
+				blank = blank.substring(0, 2*index[j]) + x + blank.substring(2*index[j]+1, blank.length);
 			}
 		}
 		update_display();
@@ -78,10 +78,11 @@ function gen() {
 	for(var i = 0; i < randselect.length; i++) {
 		blank += "_ ";
 	}
+	update_display();
 	document.getElementById("test").innerHTML = randselect;
 	document.getElementById(test + "_used").style.display = "none";
 	document.getElementById(test).style.display = "inline";
-	update_display();
+	
 }
 
 function update_display() {
