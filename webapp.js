@@ -2,9 +2,9 @@
 
 // Categories
 
-var categories = [food, sp	orts, animals, countries];
+//var categories = [food, sports, animals, countries];
 var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork", "ice cream"];
-var sports = ["baseball", "football", "soccer", "table tennis", "tennis", "badminton", "basketball", "water polo", "hockey", "swimming"];
+/*var sports = ["baseball", "football", "soccer", "table tennis", "tennis", "badminton", "basketball", "water polo", "hockey", "swimming"];
 var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur"];
 var countries = ["Argentina", "America", "China", "Japan", "Russia", "Canada", "Brazil", "Italy", "Australia", "Mexico", "Spain", "Korea", "Egypt", "Greece", "France", "Greenland", "Iceland", "England", "Portugal", "Vietnam", "India"];
 
@@ -53,8 +53,9 @@ function v(x) {
 	}
 	document.getElementById("words").innerHTML = blank;
 	//document.getElementById("words").innerHTML = "testing";
+	$("#"+x.toLowerCase()).appendTo("#guessed");
 	if(right == false) {
-		$("#"+x.toLowerCase()).appendTo("#guessed");
+		
 	} else {
 		for(var j = 0; j < index.length; j++) {
 			if(index[j] == 0) {
