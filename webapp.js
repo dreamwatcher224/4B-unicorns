@@ -33,6 +33,7 @@ var storage = 0;
 var index = [];
 var right = false;
 var blank = "";
+var alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 function v(x) {
 	var test = x.toLowerCase();
@@ -53,7 +54,8 @@ function v(x) {
 	}
 	document.getElementById("words").innerHTML = blank;
 	//document.getElementById("words").innerHTML = "testing";
-	$("#"+x.toLowerCase()).appendTo("#guessed");
+	$("#"+x.toLowerCase() + "_used").show();
+	$("#" + x.toLowerCase()).hide();
 	if(right == false) {
 		
 	} else {
@@ -84,8 +86,10 @@ function gen() {
 	}
 	update_display();
 	//document.getElementById("test").innerHTML = randselect;
-	document.getElementById(test + "_used").style.display = "none";
-	document.getElementById(test).style.display = "inline";
+	for(var i = 0; i < alphabet.length; i++) {
+		$("#" + alphabet.charAt(i)).show();
+		$("#" + alphabet.charAt(i) + "_used").hide();
+	}
 	
 }
 
