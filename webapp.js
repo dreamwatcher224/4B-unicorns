@@ -53,7 +53,8 @@ function v(x) {
 	}
 	document.getElementById("words").innerHTML = blank;
 	//document.getElementById("words").innerHTML = "testing";
-	$("#"+x.toLowerCase()).appendTo("#guessed");
+	
+	$("#"+x.toLowerCase() + "_used").show();
 	if(right == false) {
 		
 	} else {
@@ -82,11 +83,11 @@ function gen() {
 	for(var i = 0; i < randselect.length; i++) {
 		blank += "_ ";
 	}
-	update_display();
+	
 	//document.getElementById("test").innerHTML = randselect;
 	document.getElementById(test + "_used").style.display = "none";
 	document.getElementById(test).style.display = "inline";
-	
+	update_display();
 }
 
 function update_display() {
