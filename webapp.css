@@ -90,6 +90,18 @@ h3 {
 	background-image: url(images/eworld.png);
 }
 
+#easy {
+	background-color: rgba(0,0,0,1.00);
+}
+
+#normal {
+	background-color: rgba(0,0,0,1.00);
+}
+
+#hard {
+	background-color: rgba(0,0,0,1.00);
+}
+
 #side {
 	margin-top: none;
 	border: none;
