@@ -34,6 +34,7 @@ var index = [];
 var right = false;
 var blank = "";
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
+var imgCount = 1;
 
 function v(x) {
 	var test = x.toLowerCase();
@@ -56,7 +57,13 @@ function v(x) {
 	//document.getElementById("words").innerHTML = "testing";
 	$("#"+x.toLowerCase() + "_used").show();
 	$("#" + x.toLowerCase()).hide();
+	
 	if(right == false) {
+		imgCount++;
+		$("#hangmanpng").attr("src", "images/Hangman-" + imgCount + ".png");
+		if(imgCount == 11) {
+			alert("Game Over");
+		}
 		
 	} else {
 		for(var j = 0; j < index.length; j++) {
@@ -90,7 +97,8 @@ function gen() {
 		$("#" + alphabet.charAt(i)).show();
 		$("#" + alphabet.charAt(i) + "_used").hide();
 	}
-	
+	$("#hangmanpng").attr("src", "images/Hangman.png");
+	imgCount = 1;
 }
 
 function update_display() {
