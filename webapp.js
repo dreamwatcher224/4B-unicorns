@@ -62,7 +62,7 @@ function v(x) {
 		imgCount++;
 		$("#hangmanpng").attr("src", "images/Hangman-" + imgCount + ".png");
 		if(imgCount == 11) {
-			alert("Game Over");
+			alert("Game Over. \nThe correct word was " + randselect.toUpperCase() + ".");
 		}
 		
 	} else {
