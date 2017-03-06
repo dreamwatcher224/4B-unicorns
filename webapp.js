@@ -15,15 +15,19 @@ var countries = ["argentina", "america", "china", "japan", "russia", "canada", "
 // Category Functions
 function f() {
 	category = food[Math.floor(Math.random() * food.length)];
+	gen();
 }
 function s() {
 	category = sports[Math.floor(Math.random() * sports.length)];
+	gen();
 }
 function a() {
 	category = animals[Math.floor(Math.random() * animals.length)];
+	gen();
 }
 function c() {
 	category = countries[Math.floor(Math.random() * countries.length)];
+	gen();
 } 
 
 
@@ -37,6 +41,8 @@ var right = false;
 var blank = "";
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var imgCount = 1;
+
+var category = food[Math.floor(Math.random() * food.length)];
 
 function v(x) {
 	var test = x.toLowerCase();
