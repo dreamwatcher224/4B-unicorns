@@ -156,6 +156,10 @@ h3 {
 }
 
 
+.h2 {
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+}
+
 @media screen and (max-width: 980px) {
 	#box {
 		width: 94%;
