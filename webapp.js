@@ -5,7 +5,7 @@
 
 //var categories = [food, sports, animals, countries];
 var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork"];
-/*var sports = ["baseball", "football", "soccer", "tennis", "badminton", "basketball", "hockey", "swimming"];
+var sports = ["baseball", "football", "soccer", "tennis", "badminton", "basketball", "hockey", "swimming"];
 var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur"];
 var countries = ["Argentina", "America", "China", "Japan", "Russia", "Canada", "Brazil", "Italy", "Australia", "Mexico", "Spain", "Korea", "Egypt", "Greece", "France", "Greenland", "Iceland", "England", "Portugal", "Vietnam", "India"];
 
@@ -13,18 +13,18 @@ var countries = ["Argentina", "America", "China", "Japan", "Russia", "Canada", "
 
 
 // Category Functions
-function f(val) {
+function f() {
 	category = food[Math.floor(Math.random() * food.length)];
 }
-function s(val) {
+function s() {
 	category = sports[Math.floor(Math.random() * sports.length)];
 }
-function a(val) {
+function a() {
 	category = animals[Math.floor(Math.random() * animals.length)];
 }
-function c(val) {
+function c() {
 	category = countries[Math.floor(Math.random() * countries.length)];
-} */
+} 
 
 
 
@@ -87,7 +87,7 @@ function update(a) {
 }
 function gen() {
 	blank = "";
-	randselect = food[Math.floor(Math.random() * food.length)];
+	randselect = category;
 	// Prints blank underscores
 	for(var i = 0; i < randselect.length; i++) {
 		blank += "_ ";
@@ -110,6 +110,8 @@ function update_display() {
 
 var randselect = "";
 var blank = "";
+
+window.onload = gen;
 
 //document.getElementById("words").innerHTML = blank;
 
