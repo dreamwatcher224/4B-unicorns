@@ -4,6 +4,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Web App</title>
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
 		<!--Stylesheet-->
 		<link rel="stylesheet" type="text/css" href="webapp.css">
 		<!--JavaScript-->	
@@ -24,17 +26,17 @@
 	</div>
 	
 	<div class="sidebox">
-		<h2 style="text-align: center;"> Categories</h2>
+		<h2 class="font" style="text-align: center;"> Categories</h2>
 		<div id= "side"> <br>
 <input type="button" value="Sports" class="button category" id="sports" onClick="s()"><br>
 <input type="button" value="Animals" class="button category" id="animals" onClick="a()"><br>
 <input type="button" value="Countries" class="button category" id="countries" onClick="c()">
 <input type="button" value="Food" class="button category" id="food" onClick="f()">
 
-<h2 style="text-align: center;"> Difficulties </h2>
-<input type="difficultybutton" value="Easy" class="button category" id="easy" onClick="e(val)">
-<input type="difficultybutton" value="Normal" class="button category" id="normal" onClick="n(val)">
-<input type="difficultybutton" value="Hard" class="button category" id="hard" onClick="h(val)">
+<h2 class="font" style="text-align: center;"> Difficulties </h2>
+<input type="button" value="Easy" class="button category" id="easy" onClick="e(val)">
+<input type="button" value="Normal" class="button category" id="normal" onClick="n(val)">
+<input type="button" value="Hard" class="button category" id="hard" onClick="h(val)">
 		</div>
 	</div>
 	
@@ -53,7 +55,7 @@
 		</div>
 	
 		<div id="guessed">
-		<h2> Guessed Letters</h2>
+		<h2 class="font"> Guessed Letters</h2>
 		<p>
 			<input type= "button" class= "used button letter" value= "A"  id = "a_used">
 			<input type= "button" class= "used button letter" value= "B"  id = "b_used">

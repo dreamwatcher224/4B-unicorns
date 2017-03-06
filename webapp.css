@@ -63,6 +63,10 @@ h3 {
 	margin: 25px 20px 25px 25px;
 }
 
+#gen {
+	width: 100px;
+	height: 100px;
+}
 .button.category {
 	cursor: pointer;
 	margin-top: 10px;
@@ -88,6 +92,18 @@ h3 {
 
 #countries {
 	background-image: url(images/eworld.png);
+}
+
+#easy {
+	background-color: rgba(0,0,0,1.00);
+}
+
+#normal {
+	background-color: rgba(0,0,0,1.00);
+}
+
+#hard {
+	background-color: rgba(0,0,0,1.00);
 }
 
 #side {
@@ -143,6 +159,9 @@ h3 {
 	font-size: 20px;
 }
 
+.font {
+	font-family: 'Handlee';
+}
 
 @media screen and (max-width: 980px) {
 	#box {
