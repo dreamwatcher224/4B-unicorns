@@ -93,6 +93,12 @@ function update(a) {
 }
 function gen() {
 	blank = "";
+	/*
+		if(category == "food") {
+			randselect = food[Math.floor(Math.random() * food.length)];
+		} else if(category == "sports") {
+			
+	*/
 	randselect = category;
 	// Prints blank underscores
 	for(var i = 0; i < randselect.length; i++) {
