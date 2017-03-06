@@ -7,7 +7,7 @@
 var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork"];
 var sports = ["baseball", "football", "soccer", "tennis", "badminton", "basketball", "hockey", "swimming"];
 var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur"];
-var countries = ["Argentina", "America", "China", "Japan", "Russia", "Canada", "Brazil", "Italy", "Australia", "Mexico", "Spain", "Korea", "Egypt", "Greece", "France", "Greenland", "Iceland", "England", "Portugal", "Vietnam", "India"];
+var countries = ["argentina", "america", "china", "japan", "russia", "canada", "brazil", "italy", "australia", "mexico", "spain", "korea", "egypt", "greece", "france", "greenland", "iceland", "england", "portugal", "vietnam", "india"];
 
 
 
@@ -112,24 +112,3 @@ var randselect = "";
 var blank = "";
 
 window.onload = gen;
-
-//document.getElementById("words").innerHTML = blank;
-
-
-/*var counter = 0; 
-var index = [];
-var correct = false;
-
-function v(x) {
-	var text = x.toLowerCase();
-	for(var i = 0; i < randselect; i++) {
-		if(randselect.charAt(i) == text) {
-			index[counter] = i;
-			counter++;
-			correct = true;
-		}
-	}
-	document.write(index);
-}*/
-
-//JQuery
