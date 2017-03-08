@@ -127,11 +127,11 @@ h3 {
 	cursor: pointer;
 	border-top: 2px solid transparent;
 	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-	font-style: oblique;
 	text-align: center;
 }
 .button.letter {
 	background-color: white;
+	font-style: oblique;
 }
 
 #hangman {
@@ -161,6 +161,7 @@ h3 {
 
 .font {
 	font-family: 'Handlee';
+	font-style:normal;
 }
 
 @media screen and (max-width: 980px) {
