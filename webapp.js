@@ -42,7 +42,7 @@ var blank = "";
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var imgCount = 1;
 
-var category = food[Math.floor(Math.random() * food.length)];
+var category = "food";
 
 function v(x) {
 	var test = x.toLowerCase();
@@ -122,7 +122,7 @@ function update_display() {
 
 // Random Word Chooser
 
-var randselect = randselect = food[Math.floor(Math.random() * food.length)];
+var randselect = "";
 var blank = "";
 
 window.onload = gen;
