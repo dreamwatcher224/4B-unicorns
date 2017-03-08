@@ -162,6 +162,7 @@ h3 {
 .font {
 	font-family: 'Handlee';
 	font-style:normal;
+	text-align: left;
 }
 
 @media screen and (max-width: 980px) {
