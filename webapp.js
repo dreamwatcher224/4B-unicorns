@@ -14,19 +14,19 @@ var countries = ["argentina", "america", "china", "japan", "russia", "canada", "
 
 // Category Functions
 function f() {
-	category = food[Math.floor(Math.random() * food.length)];
+	category = "food";
 	gen();
 }
 function s() {
-	category = sports[Math.floor(Math.random() * sports.length)];
+	category = "sports";
 	gen();
 }
 function a() {
-	category = animals[Math.floor(Math.random() * animals.length)];
+	category = "animals";
 	gen();
 }
 function c() {
-	category = countries[Math.floor(Math.random() * countries.length)];
+	category = "countries";
 	gen();
 } 
 
@@ -93,13 +93,15 @@ function update(a) {
 }
 function gen() {
 	blank = "";
-	/*
-		if(category == "food") {
-			randselect = food[Math.floor(Math.random() * food.length)];
-		} else if(category == "sports") {
-			
-	*/
-	randselect = category;
+	if(category == "food") {
+		randselect = food[Math.floor(Math.random() * food.length)];
+	} else if(category == "sports") {
+		randselect = sports[Math.floor(Math.random() * sports.length)];
+	} else if(category == "animals") {
+		randselect = animals[Math.floor(Math.random() * animals.length)];
+	} else if(category == "countries") {
+		randselect = countries[Math.floor(Math.random() * countries.length)];
+	}
 	// Prints blank underscores
 	for(var i = 0; i < randselect.length; i++) {
 		blank += "_ ";
@@ -120,7 +122,7 @@ function update_display() {
 
 // Random Word Chooser
 
-var randselect = "";
+var randselect = randselect = food[Math.floor(Math.random() * food.length)];
 var blank = "";
 
 window.onload = gen;
