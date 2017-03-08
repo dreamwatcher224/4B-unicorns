@@ -95,12 +95,16 @@ function gen() {
 	blank = "";
 	if(category == "food") {
 		randselect = food[Math.floor(Math.random() * food.length)];
+		document.getElementById("categoryName").innerHTML = "Category: food";
 	} else if(category == "sports") {
 		randselect = sports[Math.floor(Math.random() * sports.length)];
+		document.getElementById("categoryName").innerHTML = "Category: sports";
 	} else if(category == "animals") {
 		randselect = animals[Math.floor(Math.random() * animals.length)];
+		document.getElementById("categoryName").innerHTML = "Category: animals";
 	} else if(category == "countries") {
 		randselect = countries[Math.floor(Math.random() * countries.length)];
+		document.getElementById("categoryName").innerHTML = "Category: countries";
 	}
 	// Prints blank underscores
 	for(var i = 0; i < randselect.length; i++) {
