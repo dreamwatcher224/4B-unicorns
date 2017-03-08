@@ -4,10 +4,10 @@
 
 
 //var categories = [food, sports, animals, countries];
-var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork"];
-var sports = ["baseball", "football", "soccer", "tennis", "badminton", "basketball", "hockey", "swimming"];
-var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur"];
-var countries = ["argentina", "america", "china", "japan", "russia", "canada", "brazil", "italy", "australia", "mexico", "spain", "korea", "egypt", "greece", "france", "greenland", "iceland", "england", "portugal", "vietnam", "india"];
+var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork", "kimchi", "kale", "bread", "soup", "peach", "pear", "banana", "watermelon", "mango", "grapes", "tofu", "rice", "egg", "avocado", "doughnut", "cereal", "hamburger", "eggplant", "walnut", "cashew", "pie", "zucchini", "squash"];
+var sports = ["baseball", "football", "soccer", "tennis", "badminton", "basketball", "hockey", "swimming", "volleyball", "fencing", "skiing", "snowboarding", "gymnastics", "golf", "boxing", "wrestling", "polo", "cricket", "bowling", "archery", "skating", "karate", "taekwondo", "cycling"];
+var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur", "chinchilla", "baboon", "deer", "badger", "owl", "caterpillar", "butterfly", "dolphin", "mouse", "fish"];
+var countries = ["argentina", "america", "china", "japan", "russia", "canada", "brazil", "italy", "australia", "mexico", "spain", "korea", "egypt", "greece", "france", "greenland", "iceland", "england", "portugal", "vietnam", "india", "philippines"];
 
 
 
