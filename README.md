@@ -19,10 +19,12 @@ Insert answer here.
 
 #### Bug fixes
  * Buttons could not be clicked after finishing a game
- * 
+ * Buttons could not be clicked before generating a game
+ 
 #### Changes
  * Added categories (Easy, Normal, and Hard)
  * Added a "You Win!" alert
+ * Words automaticaly generate after finishing a game
  
 ### Version 1.1
 
