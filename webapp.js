@@ -4,27 +4,31 @@
 
 
 //var categories = [food, sports, animals, countries];
-var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork"];
-/*var sports = ["baseball", "football", "soccer", "tennis", "badminton", "basketball", "hockey", "swimming"];
-var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur"];
-var countries = ["Argentina", "America", "China", "Japan", "Russia", "Canada", "Brazil", "Italy", "Australia", "Mexico", "Spain", "Korea", "Egypt", "Greece", "France", "Greenland", "Iceland", "England", "Portugal", "Vietnam", "India"];
+var food = ["cake", "steak", "carrot", "zucchini", "cucumber", "cookie", "tomato", "potato", "bacon", "pork", "kimchi", "kale", "bread", "soup", "peach", "pear", "banana", "watermelon", "mango", "grapes", "tofu", "rice", "egg", "avocado", "doughnut", "cereal", "hamburger", "eggplant", "walnut", "cashew", "pie", "zucchini", "squash"];
+var sports = ["baseball", "football", "soccer", "tennis", "badminton", "basketball", "hockey", "swimming", "volleyball", "fencing", "skiing", "snowboarding", "gymnastics", "golf", "boxing", "wrestling", "polo", "cricket", "bowling", "archery", "skating", "karate", "taekwondo", "cycling"];
+var animals = ["ant", "squirrel", "rabbit", "dog", "cat", "salamander", "alligator", "crocodile", "donkey", "horse", "tiger", "lion", "cheetah", "leopard", "lemur", "chinchilla", "baboon", "deer", "badger", "owl", "caterpillar", "butterfly", "dolphin", "mouse", "fish"];
+var countries = ["argentina", "america", "china", "japan", "russia", "canada", "brazil", "italy", "australia", "mexico", "spain", "korea", "egypt", "greece", "france", "greenland", "iceland", "england", "portugal", "vietnam", "india", "philippines"];
 
 
 
 
 // Category Functions
-function f(val) {
-	category = food[Math.floor(Math.random() * food.length)];
+function f() {
+	category = "food";
+	gen();
 }
-function s(val) {
-	category = sports[Math.floor(Math.random() * sports.length)];
+function s() {
+	category = "sports";
+	gen();
 }
-function a(val) {
-	category = animals[Math.floor(Math.random() * animals.length)];
+function a() {
+	category = "animals";
+	gen();
 }
-function c(val) {
-	category = countries[Math.floor(Math.random() * countries.length)];
-} */
+function c() {
+	category = "countries";
+	gen();
+} 
 
 
 
@@ -37,6 +41,9 @@ var right = false;
 var blank = "";
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var imgCount = 1;
+var testEqual = "";
+
+var category = "food";
 
 function v(x) {
 	var test = x.toLowerCase();
@@ -65,6 +72,7 @@ function v(x) {
 		$("#hangmanpng").attr("src", "images/Hangman-" + imgCount + ".png");
 		if(imgCount == 11) {
 			alert("Game Over. \nThe correct word was " + randselect.toUpperCase() + ".");
+			gen();
 		}
 		
 	} else {
@@ -77,9 +85,15 @@ function v(x) {
 		}
 		update_display();
 	}
+	
 	index = [];
 	counter = 0;
 	right = false;
+	//alert(blank + "..." + testEqual + "...." + randselect);
+	if(testEqual == blank) {
+		alert("You win! \nThe correct word was " + randselect.toUpperCase() + ".");
+		gen();
+	}
 }
 
 function update(a) {
@@ -87,7 +101,20 @@ function update(a) {
 }
 function gen() {
 	blank = "";
-	randselect = food[Math.floor(Math.random() * food.length)];
+	testEqual = "";
+	if(category == "food") {
+		randselect = food[Math.floor(Math.random() * food.length)];
+		document.getElementById("categoryName").innerHTML = "Category: food";
+	} else if(category == "sports") {
+		randselect = sports[Math.floor(Math.random() * sports.length)];
+		document.getElementById("categoryName").innerHTML = "Category: sports";
+	} else if(category == "animals") {
+		randselect = animals[Math.floor(Math.random() * animals.length)];
+		document.getElementById("categoryName").innerHTML = "Category: animals";
+	} else if(category == "countries") {
+		randselect = countries[Math.floor(Math.random() * countries.length)];
+		document.getElementById("categoryName").innerHTML = "Category: countries";
+	}
 	// Prints blank underscores
 	for(var i = 0; i < randselect.length; i++) {
 		blank += "_ ";
@@ -98,8 +125,15 @@ function gen() {
 		$("#" + alphabet.charAt(i)).show();
 		$("#" + alphabet.charAt(i) + "_used").hide();
 	}
+	for(var j = 0; j < randselect.length; j++) {
+		testEqual += randselect[j] + " ";
+		//alert(randselect[j] + "..." + randselect);
+	}
+	
 	$("#hangmanpng").attr("src", "images/Hangman.png");
 	imgCount = 1;
+	
+	testEqual = testEqual.toUpperCase();
 }
 
 function update_display() {
@@ -111,23 +145,4 @@ function update_display() {
 var randselect = "";
 var blank = "";
 
-//document.getElementById("words").innerHTML = blank;
-
-
-/*var counter = 0; 
-var index = [];
-var correct = false;
-
-function v(x) {
-	var text = x.toLowerCase();
-	for(var i = 0; i < randselect; i++) {
-		if(randselect.charAt(i) == text) {
-			index[counter] = i;
-			counter++;
-			correct = true;
-		}
-	}
-	document.write(index);
-}*/
-
-//JQuery
+window.onload = gen;
