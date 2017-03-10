@@ -41,6 +41,7 @@ var right = false;
 var blank = "";
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var imgCount = 1;
+var testEqual = "";
 
 var category = "food";
 
@@ -84,9 +85,15 @@ function v(x) {
 		}
 		update_display();
 	}
+	
 	index = [];
 	counter = 0;
 	right = false;
+	//alert(blank + "..." + testEqual + "...." + randselect);
+	if(testEqual == blank) {
+		alert("You win! \nThe correct word was " + randselect.toUpperCase() + ".");
+		gen();
+	}
 }
 
 function update(a) {
@@ -94,6 +101,7 @@ function update(a) {
 }
 function gen() {
 	blank = "";
+	testEqual = "";
 	if(category == "food") {
 		randselect = food[Math.floor(Math.random() * food.length)];
 		document.getElementById("categoryName").innerHTML = "Category: food";
@@ -117,8 +125,15 @@ function gen() {
 		$("#" + alphabet.charAt(i)).show();
 		$("#" + alphabet.charAt(i) + "_used").hide();
 	}
+	for(var j = 0; j < randselect.length; j++) {
+		testEqual += randselect[j] + " ";
+		//alert(randselect[j] + "..." + randselect);
+	}
+	
 	$("#hangmanpng").attr("src", "images/Hangman.png");
 	imgCount = 1;
+	
+	testEqual = testEqual.toUpperCase();
 }
 
 function update_display() {
