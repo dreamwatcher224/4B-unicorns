@@ -15,6 +15,15 @@ Insert answer here.
 
 ## Changelog
 
+### Version 1.2
+
+#### Bug fixes
+ * Buttons could not be clicked after finishing a game
+ * 
+#### Changes
+ * Added categories (Easy, Normal, and Hard)
+ * Added a "You Win!" alert
+ 
 ### Version 1.1
 
 #### Bug fixes
