@@ -71,6 +71,7 @@ function v(x) {
 		$("#hangmanpng").attr("src", "images/Hangman-" + imgCount + ".png");
 		if(imgCount == 11) {
 			alert("Game Over. \nThe correct word was " + randselect.toUpperCase() + ".");
+			gen();
 		}
 		
 	} else {
